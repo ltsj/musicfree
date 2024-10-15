@@ -443,7 +443,7 @@ const qualityLevels = {
 async function getMediaSource(musicItem, quality) {
     const res = (
         await axios_1.default.get(`https://m-api.ceseet.me/url/tx/${musicItem.songmid}/${qualityLevels[quality]}`)
-    ).data;
+    );
     return {
         url: res.data.replace(/\\\//g, '/'),
     };
